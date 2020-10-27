@@ -56,6 +56,7 @@ do
 until ($selection -match "s" -or $selection -match "n")
 
 # Comunicacion
+choco install discord -y
 choco install whatsapp -y
 choco install microsoft-teams.install -y
 Show-Choco-Menu -Title "Instalar Telegram?" -ChocoInstall "telegram.install" -Description "Plataforma de mensajes mejor que whatsapp"

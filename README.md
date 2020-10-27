@@ -26,6 +26,7 @@
  - Blender
 
  ## Comunicación
+ - Discord
  - Whatsapp
  - Microsoft Teams
  - Telegram
