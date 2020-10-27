@@ -1,15 +1,15 @@
 # Windows-10-Programs-Install
 
-## Programas que instala
+# Programas que instala
  
- # Navegador web
+ ## Navegador web
  - Firefox
  - Brave
 
- # Herramientas
+ ## Herramientas
  - 7-zip
 
- # Programacion
+ ## Programacion
  - Git
  - Github desktop
  - Python 3
@@ -20,28 +20,28 @@
  - DBeaver
  - Postman
 
- # Edicion
+ ## Edicion
  - Gimp
  - Inkscape
  - Blender
 
- # Comunicación
+ ## Comunicación
  - Whatsapp
  - Microsoft Teams
  - Telegram
  - Slack
 
- # Seguridad
+ ## Seguridad
  - KeePassXC
  - Authy
 
- # Musica
+ ## Musica
  - Spotify
  - MusicBee
 
- # Juegos
+ ## Juegos
  - Steam
  - Epic Games
 
- # Backup
+ ## Backup
  - Google Backup and Sync
