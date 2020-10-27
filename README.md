@@ -1,10 +1,22 @@
 # Windows-10-Programs-Install
 
+ ## Ejecución
+
+ - Abrir PowerShell como administrador.
+ - Moverse a la carpeta donde se hayan descargado los archivos.
+ - Ejecutar script escribiendo ".\InstallPrograms.ps1"
+
+ 
+ ## Features
+
+ - Alguos programas preguntan al momento de instalarlos, se pueden reconocer con "(?)"
+ - Se puede comentar una linea (para que no se instale un programa) con "#" al principio de la linea.
+
 # Programas que instala
  
  ## Navegador web
- - Firefox
- - Brave
+ - Firefox (?)
+ - Brave (?)
 
  ## Herramientas
  - 7-zip
@@ -15,22 +27,22 @@
  - Python 3
  - Node JS
  - Visual Studio Code
- - Intellij Idea Ultimate
- - MySQL
- - DBeaver
- - Postman
+ - Intellij Idea Ultimate (?)
+ - MySQL (?) 
+ - DBeaver (?)
+ - Postman (?)
 
  ## Edicion
- - Gimp
- - Inkscape
- - Blender
+ - Gimp (?)
+ - Inkscape (?)
+ - Blender (?)
 
  ## Comunicación
  - Discord
  - Whatsapp
  - Microsoft Teams
- - Telegram
- - Slack
+ - Telegram (?)
+ - Slack (?)
 
  ## Seguridad
  - KeePassXC
@@ -38,7 +50,7 @@
 
  ## Musica
  - Spotify
- - MusicBee
+ - MusicBee (?)
 
  ## Juegos
  - Steam
