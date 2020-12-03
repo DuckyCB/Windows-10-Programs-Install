@@ -3,8 +3,9 @@
  ## Ejecución
 
  - Abrir PowerShell como administrador.
- - Moverse a la carpeta donde se hayan descargado los archivos.
- - Ejecutar script escribiendo ".\InstallPrograms.ps1"
+ - Ejecutar el siguiente comando:
+
+    iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JImGR'))
 
  
  ## Features
@@ -23,17 +24,20 @@
 
  ## Programacion
  - Git
- - Github desktop
  - Python 3
  - Node JS
  - Visual Studio Code
+ - Windows terminal
  - Intellij Idea Ultimate (?)
+ - Pycharm Professional (?)
+ - PHPStorm (?)
  - MySQL (?) 
  - DBeaver (?)
  - Postman (?)
 
  ## Edicion
  - Gimp (?)
+ - Audacity (?)
  - Inkscape (?)
  - Blender (?)
 
