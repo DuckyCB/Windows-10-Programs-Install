@@ -5,7 +5,7 @@
  - Abrir PowerShell como administrador.
  - Ejecutar el siguiente comando:
 
-    iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JImGR'))
+	iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JImGR'))
 
  
  ## Features
