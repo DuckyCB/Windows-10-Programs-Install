@@ -12,6 +12,14 @@ $tweaks = @(
 	"InstallBackup"
 )
 
+
+Function RequireAdmin {
+	If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
+		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
+		Exit
+	}
+}
+
 # Instala un package manager
 Function InstallChocolatey {
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -19,9 +27,11 @@ Function InstallChocolatey {
 
 # Instala programas basicos
 Function InstallEssentials {
-	Show-Choco-Menu -Title "Instalar Firefox?" -ChocoInstall "firefox" -Description "Navegador web Open source"
-	Show-Choco-Menu -Title "Instalar Brave?" -ChocoInstall "brave" -Description "Navegador web basado en Chromium"
+	choco install firefox -y
+	choco install brave -y
 	choco install 7zip.install -y
+	choco install notion -y
+	choco install powertoys -y
 }
 
 # Programacion
@@ -31,54 +41,44 @@ Function InstallDeveloppment {
 	choco install nodejs.install -y
 	choco install vscode -y
 	choco install microsoft-windows-terminal -y
-	Show-Choco-Menu -Title "Instalar IntelliJ Idea Ultimate?" -ChocoInstall "intellijidea-ultimate" -Description "La mejor IDE para Java"
-	Show-Choco-Menu -Title "Instalar PyCharm?" -ChocoInstall "pycharm" -Description "La mejor IDE para Python"
-	Show-Choco-Menu -Title "Instalar PHPStorm?" -ChocoInstall "phpstorm" -Description "La mejor IDE para desarollo web"
-	do {
-		Clear-Host
-		Write-Host "================ Instalar MySQL + DBeaver + Postman? ================"
-		Write-Host "S: Presionar 's' para instalar."
-		Write-Host "N: Presionar 'n' para saltear."
-		$selection = Read-Host "Elija una opcion:"
-		switch ($selection) {
-			's' {
-				choco install mysql -y
-				choco install dbeaver -y
-				choco install postman -y
-			} 'n' { 
-				Break 
-			}
-		}
-	} until ($selection -match "s" -or $selection -match "n")
+	choco install intellijidea-ultimate -y
+	choco install pycharm -y
+	choco install phpstorm -y
+	choco install androidstudio -y
+	choco install winscp -y
+	# choco install mysql -y
+	# choco install dbeaver -y
+	# choco install postman -y
 }
 
 # Edicion
 Function InstallEditing {
-	Show-Choco-Menu -Title "Instalar Gimp?" -ChocoInstall "gimp" -Description "Edicion a nivel de pixeles en fotografias"
-	Show-Choco-Menu -Title "Instalar Audacity?" -ChocoInstall "audacity" -Description "Edicion de audio"
-	Show-Choco-Menu -Title "Instalar Blender?" -ChocoInstall "blender" -Description "Edicion 3D de objetos"
-	Show-Choco-Menu -Title "Instalar Inkscape?" -ChocoInstall "inkscape" -Description "Edicion vectorial de imagenes"
+	choco install gimp -y
+	choco install audacity -y
+	choco install blender -y
+	choco install inkscape -y
 }
 
 # Comunicacion
 Function InstallComunication {
 	choco install discord -y
+	choco install telegram -y
 	choco install whatsapp -y
 	choco install microsoft-teams -y
-	Show-Choco-Menu -Title "Instalar Telegram?" -ChocoInstall "telegram" -Description "Plataforma de mensajes mejor que whatsapp"
-	Show-Choco-Menu -Title "Instalar Slack?" -ChocoInstall "slack" -Description "Plataforma de mensajes que usa Dani"
+	choco install slack -y
 }
 
 # Seguridad
 Function InstallSecurity {
 	choco install keepassxc -y
 	choco install authy-desktop -y
+
 }
 
 # Musica
 Function InstallMusic {
 	choco install spotify -y
-	Show-Choco-Menu -Title "Instalar MusicBee?" -ChocoInstall "musicbee" -Description "Reproductor de musica, uno de los mejores"
+	choco install musicbee -y
 }
 
 # Juegos
@@ -90,47 +90,6 @@ Function InstallGaming {
 # Backup
 Function InstallBackup {
 	choco install google-backup-and-sync -y
-}
-
-Function RequireAdmin {
-	If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
-		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
-		Exit
-	}
-}
-
-function Show-Choco-Menu {
-
-	param(
-		[Parameter(Mandatory)]
-		[ValidateNotNullOrEmpty()]
-		[string]$Title,
-
-		[Parameter(Mandatory)]
-		[ValidateNotNullOrEmpty()]
-		[string]$ChocoInstall,
-
-		[Parameter(Mandatory)]
-		[ValidateNotNullOrEmpty()]
-		[string]$Description
-	)
-
-	do {
-		Clear-Host
-		Write-Host "Descripcion: $Description"
-		Write-Host "================ $Title ================"
-		Write-Host "Y: Presionar 's' para instalar."
-		Write-Host "2: Presionar 'n' para saltear."
-		$selection = Read-Host "Elija una opcion:"
-		switch ($selection) {
-			's' {
-				choco install $ChocoInstall -y 
-			} 'n' {
-				Break 
-			}
-		}
-	} until ($selection -match "s" -or $selection -match "n")
-
 }
 
 # Normalize path to preset file
