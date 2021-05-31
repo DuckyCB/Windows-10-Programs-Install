@@ -46,6 +46,7 @@ Function InstallDeveloppment {
 	choco install phpstorm -y
 	choco install androidstudio -y
 	choco install winscp -y
+	choco install neovim -y
 	# choco install mysql -y
 	# choco install dbeaver -y
 	# choco install postman -y
