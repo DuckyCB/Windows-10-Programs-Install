@@ -4,7 +4,7 @@
 
  - Es necesario tener Chocolatey instalado, se puede instalar desde este link:
 
-       <https://chocolatey.org/install>
+<https://chocolatey.org/install>
 
  ## Ejecución
 
