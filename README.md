@@ -10,17 +10,19 @@
  
  ## Features
 
- - Alguos programas preguntan al momento de instalarlos, se pueden reconocer con "(?)"
  - Se puede comentar una linea (para que no se instale un programa) con "#" al principio de la linea.
 
 # Programas que instala
  
  ## Navegador web
- - Firefox (?)
- - Brave (?)
+ - Firefox
+ - Brave
 
  ## Herramientas
  - 7-zip
+ - Notion
+ - PowerToys
+
 
  ## Programacion
  - Git
@@ -28,25 +30,26 @@
  - Node JS
  - Visual Studio Code
  - Windows terminal
- - Intellij Idea Ultimate (?)
- - Pycharm Professional (?)
- - PHPStorm (?)
- - MySQL (?) 
- - DBeaver (?)
- - Postman (?)
+ - Intellij Idea Ultimate
+ - Pycharm Professional
+ - PHPStorm
+ - Android Studio
+ - WinSCP
+ - NeoVim
+
 
  ## Edicion
- - Gimp (?)
- - Audacity (?)
- - Inkscape (?)
- - Blender (?)
+ - Gimp
+ - Audacity
+ - Inkscape
+ - Blender
 
  ## Comunicación
  - Discord
  - Whatsapp
  - Microsoft Teams
- - Telegram (?)
- - Slack (?)
+ - Telegram
+ - Slack
 
  ## Seguridad
  - KeePassXC
@@ -54,7 +57,7 @@
 
  ## Musica
  - Spotify
- - MusicBee (?)
+ - MusicBee
 
  ## Juegos
  - Steam
