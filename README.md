@@ -1,5 +1,11 @@
 # Windows-10-Programs-Install
 
+ ## Requisitos
+
+ - Es necesario tener Chocolatey instalado, se puede instalar desde este link:
+
+       <https://chocolatey.org/install>
+
  ## Ejecución
 
  - Abrir PowerShell como administrador.
